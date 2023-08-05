@@ -1,0 +1,29 @@
+{
+  "name": "your-choice-app",
+  "private": true,
+  "author": "Oleg Veremyev",
+  "description": "Choice your prefer variant",
+  "keywords": ["svelte", "typescript"],
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host localhost --port 9000",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^4.0.1",
+    "@types/node": "^20.4.7",
+    "sass": "^1.64.2",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.14"
+  }
+}
