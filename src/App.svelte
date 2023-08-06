@@ -4,6 +4,7 @@
   import Footer from "@/components/Footer.svelte";
   import Polls from "@/pages/Polls.svelte";
   import Countries from "@/pages/Countries.svelte";
+  import ScrollTop from "@/shared/ScrollTop.svelte";
 </script>
 
 <template>
@@ -18,6 +19,7 @@
 			</Route>
 		</main>
 		<Footer/>
+		<ScrollTop/>
 	</Router>
 </template>
 
@@ -25,7 +27,7 @@
   main {
     max-width: 960px;
     min-height: calc(100vh - 220px);
-    margin: 40px auto 40px;
+    margin: 20px auto 40px;
     padding: 0 10px;
     flex-grow: 1;
   }

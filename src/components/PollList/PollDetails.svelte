@@ -2,8 +2,9 @@
   import {tweened} from "svelte/motion"
   import {pollStore} from "@/stores";
   import type {OptionType, IPolls} from "@/types";
-  import Button from "@/shared/Button.svelte";
   import Card from "@/shared/Card.svelte";
+  import PollHeader from "@/components/PollList/PollHeader.svelte";
+  import PollControl from "@/components/PollList/PollControl.svelte";
 
   export let poll: IPolls = {} as IPolls
 
@@ -30,17 +31,12 @@
       return copiedPolls
     })
   }
-
-  const handleDelete = (id: number): void => {
-    pollStore.update((currentPolls: IPolls[]): IPolls[] => {
-      return currentPolls.filter((poll: IPolls) => poll.id !== id)
-    })
-  }
 </script>
 
 <Card>
 	<div class="poll">
-		<h3 class="poll-title">{poll.question}</h3>
+		<PollHeader question={poll.question} id={poll.id}/>
+
 		<p class="total">Total votes: {totalVotes}</p>
 		<div
 			class="answer"
@@ -62,26 +58,11 @@
 			></div>
 			<span> {poll.answerB} ({poll.votesB})</span>
 		</div>
-		<div class="delete">
-			<Button
-				flat={true}
-				on:click={()=>handleDelete(poll.id)}
-			>
-				Delete
-			</Button>
-		</div>
+		<PollControl id={poll.id}/>
 	</div>
 </Card>
 
 <style lang="scss">
-  .poll {
-  }
-
-  .poll-title {
-    margin: 0 auto;
-    color: #555;
-  }
-
   .total {
     margin-top: 6px;
     font-size: 14px;
@@ -98,6 +79,8 @@
     border-radius: 4px;
     overflow: hidden;
     opacity: 1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: none;
 
     &:hover {
       opacity: 0.8;
@@ -132,11 +115,5 @@
       border-left: 4px solid #45c496;
       background-color: rgba(69, 196, 150, 0.3);
     }
-  }
-
-  .delete {
-    margin-top: 30px;
-    text-align: center;
-    width: 100%;
   }
 </style>

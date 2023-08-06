@@ -2,7 +2,7 @@
   import Tabs from "@/shared/Tabs.svelte";
   import CreatePollForm from "@/components/CreatePollForm.svelte";
   import {NAV_ITEMS} from "@/types/enums";
-  import PollList from "@/components/PollList.svelte";
+  import PollList from "@/components/PollList/PollList.svelte";
 
   //tabs
   let items: NAV_ITEMS[] = [NAV_ITEMS.CURRENT_POLLS, NAV_ITEMS.ADD_NEW_POLL]

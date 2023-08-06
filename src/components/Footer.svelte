@@ -17,7 +17,7 @@
   .copyright {
 	  color: #aaa;
 	  font-size: 14px;
-    padding: 20px;
+    padding: 13px;
 	  display: inline-block;
   }
 </style>
