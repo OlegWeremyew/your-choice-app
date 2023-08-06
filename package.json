@@ -3,7 +3,10 @@
   "private": true,
   "author": "Oleg Veremyev",
   "description": "Choice your prefer variant",
-  "keywords": ["svelte", "typescript"],
+  "keywords": [
+    "svelte",
+    "typescript"
+  ],
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -24,6 +27,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "autoprefixer": "^10.4.14"
+    "autoprefixer": "^10.4.14",
+    "svelte-navigator": "^3.2.2"
   }
 }

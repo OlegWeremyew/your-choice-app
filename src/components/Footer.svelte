@@ -8,8 +8,10 @@
 
 <style lang="scss">
   footer {
-    padding: 40px;
 	  text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #ddd;
   }
 
   .copyright {
@@ -17,6 +19,5 @@
 	  font-size: 14px;
     padding: 20px;
 	  display: inline-block;
-	  border-top: 1px solid #ddd;
   }
 </style>

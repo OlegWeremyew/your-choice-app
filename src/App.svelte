@@ -1,35 +1,32 @@
 <script lang="ts">
+  import {Router, Route} from "svelte-navigator";
   import Header from "@/components/Header.svelte";
   import Footer from "@/components/Footer.svelte";
-  import Tabs from "@/shared/Tabs.svelte";
-  import {NAV_ITEMS} from "@/types";
-  import CreatePollForm from "@/components/CreatePollForm.svelte";
-
-  //tabs
-  let items: NAV_ITEMS[] = [NAV_ITEMS.CURRENT_POLLS, NAV_ITEMS.ADD_NEW_POLL]
-  let activeItem: NAV_ITEMS = NAV_ITEMS.CURRENT_POLLS
-
-  const tabChange = (e: CustomEvent): void => {
-    activeItem = e.detail
-  }
+  import Polls from "@/pages/Polls.svelte";
+  import Countries from "@/pages/Countries.svelte";
 </script>
 
 <template>
-	<Header/>
-	<main>
-		<Tabs {items} {activeItem} on:tabChange={tabChange}/>
-		{#if activeItem === NAV_ITEMS.CURRENT_POLLS}
-			<p>Poll list components goes here</p>
-		{:else if activeItem === NAV_ITEMS.ADD_NEW_POLL}
-			<CreatePollForm/>
-		{/if}
-	</main>
-	<Footer/>
+	<Router primary={false}>
+		<Header/>
+		<main>
+			<Route path="/">
+				<Polls/>
+			</Route>
+			<Route path="/countries">
+				<Countries/>
+			</Route>
+		</main>
+		<Footer/>
+	</Router>
 </template>
 
 <style lang="scss">
   main {
     max-width: 960px;
-    margin: 40px auto;
+    min-height: calc(100vh - 220px);
+    margin: 40px auto 40px;
+    padding: 0 10px;
+    flex-grow: 1;
   }
 </style>

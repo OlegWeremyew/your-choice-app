@@ -1,17 +1,22 @@
 <script lang="ts">
   import src from '@/assets/images/header-img.png'
+  import Navbar from "@/components/Navbar.svelte";
 </script>
 
 <header>
 	<h1>
 		<img {src} alt="choice images" title="choice images">
 	</h1>
+	<Navbar/>
 </header>
 
 <style lang="scss">
   header {
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   h1 {
@@ -20,6 +25,6 @@
   }
 
   img {
-    max-width: 180px;
+    max-width: 70px;
   }
 </style>

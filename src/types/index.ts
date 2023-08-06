@@ -1,4 +1,23 @@
-export enum NAV_ITEMS {
-  CURRENT_POLLS = 'Current Polls',
-  ADD_NEW_POLL = "Add New Poll",
+import {NAV_ITEMS} from "@/types/enums";
+
+export interface IPolls {
+  id: number,
+  question: string,
+  answerA: string,
+  answerB: string,
+  votesA: number,
+  votesB: number,
 }
+
+export interface IItem {
+  item: NAV_ITEMS
+}
+
+export type OptionType = 'a' | 'b'
+
+export interface IFields {
+  question: string
+  answerA: string
+  answerB: string
+}
+

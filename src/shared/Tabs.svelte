@@ -1,6 +1,6 @@
 <script lang="ts">
   import {createEventDispatcher} from "svelte";
-  import {NAV_ITEMS} from "@/types";
+  import {NAV_ITEMS} from "@/types/enums";
 
   export let items: NAV_ITEMS[]
   export let activeItem: NAV_ITEMS
