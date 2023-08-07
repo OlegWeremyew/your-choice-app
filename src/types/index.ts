@@ -21,3 +21,4 @@ export interface IFields {
   answerB: string
 }
 
+export type Nullable<T> = T | null

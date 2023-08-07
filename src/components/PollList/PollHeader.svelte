@@ -1,6 +1,6 @@
 <script lang="ts">
   import {pollStore} from "@/stores";
-  import type {IPolls} from "@/types";
+  import type {IPolls, Nullable} from "@/types";
   import Button from "@/shared/Button.svelte";
 
   export let question: string
@@ -8,7 +8,7 @@
 
   let title: string = ""
   let isShowTitle: boolean = true
-  let titleRefElement: HTMLTitleElement | null = null
+  let titleRefElement: Nullable<HTMLTitleElement> = null
 
   const changeMode = (isShow: boolean = true): void => {
     isShowTitle = isShow

@@ -1,15 +1,13 @@
 # Your choice app
 
+### A small application in which you can create cards with voting questions
+
 ## Setup
 
 Make sure to install the dependencies:
 
 ```bash
-# yarn
 yarn
-
-# npm
-npm install
 ```
 
 ## Development Server
@@ -17,7 +15,7 @@ npm install
 Start the development server on `http://localhost:9000`
 
 ```bash
-npm run dev
+yarn run dev
 ```
 
 ## Production
@@ -25,10 +23,11 @@ npm run dev
 Build the application for production:
 
 ```bash
-npm run build
+yarn run build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+yarn run preview
+```
