@@ -17,7 +17,7 @@
 	class:active={isShowButton}
 	on:click={scrollToTopPage}
 >
-	<div class="arrow"></div>
+	<span class="arrow"></span>
 </button>
 
 <svelte:window bind:scrollY={y}/>
@@ -55,6 +55,7 @@
   }
 
   .arrow {
+	  display: block;
     width: 20px;
     height: 20px;
     background-image: url(../assets/images/arrowUp.png);
